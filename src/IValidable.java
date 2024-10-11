@@ -1,3 +1,3 @@
 public interface IValidable {
-    public boolean validarDato(String datoString) throws IllegalArgumentException;  
+    public boolean validarDato(String check) throws IllegalArgumentException;
 }

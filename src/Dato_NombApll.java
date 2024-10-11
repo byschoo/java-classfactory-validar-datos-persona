@@ -1,11 +1,11 @@
 import java.util.regex.Pattern;
 
-public class DatoString implements IValidable{
+public class Dato_NombApll implements IValidable{
 
     @Override
-    public boolean validarDato(String datoString) throws IllegalArgumentException  {
+    public boolean validarDato(String check) throws IllegalArgumentException  {
         String regex = "[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\\s]+";  // Solo letras, acentos y letra ñ permitidos
-        if (!Pattern.matches(regex, datoString)) {
+        if (!Pattern.matches(regex, check)) {
             throw new IllegalArgumentException("Se deben introducir solo consonantes, vocales y caracteres especiales aceptados por el Alfabeto Español.");
         }
         return true;
