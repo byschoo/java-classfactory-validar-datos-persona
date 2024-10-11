@@ -20,3 +20,11 @@ IValidable iValidable = ClassFactory.getValidador(EDatosPersona.NOMBRE);
 5. **System.console()** para leer el nombre adecuadamente en vez de **Scanner()** que daba muchos problemas al introducir tildes y la letra ñ.
 
 6. Se hace explicita que la interfaz puede lanzar la excepción **IllegalArgumentException** y que al diseñar su implementación se debe añadir un try-catch.
+
+7. Se leen y validan DNI, sexo y fecha de nacimiento.
+
+8. DNI utiliza una expresión regular que no permite errores de formatos. (8 números y una letra).
+
+9. Sexo siempre es procesado como un string y se controla la validación de leer solo la letra "H" para hombre y "M" para mujer.
+
+10. La fecha de nacimiento se utiliza para calcular la edad e imprimirla. Se utilizan las librerias para que al leer el String se formatee a dd/MM/yyyy.
