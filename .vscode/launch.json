@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "ClassFactory_563dd391"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "env": {
+                "LANG": "es_ES.UTF-8"
+            },
+            "vmArgs": [
+                "-Dfile.encoding=UTF-8"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "PruebaScanner",
+            "request": "launch",
+            "mainClass": "PruebaScanner",
+            "projectName": "ClassFactory_563dd391"
+        }
+    ]
+}

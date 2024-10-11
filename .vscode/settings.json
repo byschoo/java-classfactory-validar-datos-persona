@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": ["src"],
+    "terminal.integrated.detectLocale": "on",
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"

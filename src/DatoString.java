@@ -1,20 +1,13 @@
 import java.util.regex.Pattern;
-import java.util.regex.PatternSyntaxException;
 
 public class DatoString implements IValidable{
 
     @Override
-    public boolean validarDato(String datoString) throws PatternSyntaxException  {
-        String regex = "[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\\s]+";  // Solo letras, acentos y letra ñ
+    public boolean validarDato(String datoString) throws IllegalArgumentException  {
+        String regex = "[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\\s]+";  // Solo letras, acentos y letra ñ permitidos
         if (!Pattern.matches(regex, datoString)) {
-            throw new PatternSyntaxException("Se deben introducir solo letras y vocales acentuadas de acuerdo al Alfabeto Español.", regex, -1);
+            throw new IllegalArgumentException("Se deben introducir solo consonantes, vocales y caracteres especiales aceptados por el Alfabeto Español.");
         }
         return true;
     }
 }
-
-// try{
-//     return datoString.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\\s]+");
-// }catch (Exception e) {
-//     // TODO: handle exception
-// }
