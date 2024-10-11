@@ -6,8 +6,7 @@ Se crearon cuatro clases: Main, Persona, DatoString y ClassFactory. Una clase EN
 
 2. **System.out.print("\033[H\033[2J")** Limpia la pantalla
 
-3. Estructura de control **Try-Catch-Finally** que ayuda a controlar los errores y la recursividad al solicitar los datos y capturar la excepción **PatternSyntaxException** lanzada por la expresión regular **"[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\\s]+"**
-
+3. Estructura de control **Try-Catch-Finally** que ayuda a controlar los errores en la validación de los datos y la recursividad al solicitar nuevamente su lectura. La excepción **IllegalArgumentException** es lanzada por la expresión regular **"[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\\s]+"** si no se cumple.
 
 4. Validación y Asignación:
 `public  void  setNombre(String  nombre) throws  PatternSyntaxException {
@@ -17,3 +16,7 @@ IValidable iValidable = ClassFactory.getValidador(EDatosPersona.NOMBRE);
 	}}`
 	
 	SetNombre se encarga de que la interfaz iValidable haga referencia a la Clase DatoString, por la ClassFactory, y Override el método validarDato(nombre) que valida y asigna el nombre.
+
+5. **System.console()** para leer el nombre adecuadamente en vez de **Scanner()** que daba muchos problemas al introducir tildes y la letra ñ.
+
+6. Se hace explicita que la interfaz puede lanzar la excepción **IllegalArgumentException** y que al diseñar su implementación se debe añadir un try-catch.
