@@ -10,11 +10,9 @@ public class Main {
         solicitarDatos.datoPrimerApellido(persona);
         solicitarDatos.datoSegundoApellido(persona);
         solicitarDatos.datoSexo(persona);
-        
+
         persona.imprimir();
 
-        solicitarDatos.datoFechaNacimiento(persona); // Calcula la edad
-
-       
+        solicitarDatos.datoFechaNacimiento(persona); // Calcula la edad       
     }
 }

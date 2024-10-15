@@ -21,7 +21,7 @@ public class Dato_FechaNacimiento implements IValidable{
         
             return true;            
         } catch (DateTimeParseException e) {
-            throw new IllegalArgumentException ("Se debe introducir la fecha en este formato (dd/MM/yyyy).");
+            throw new IllegalArgumentException("Se debe introducir la fecha con formato (dd/MM/yyyy).", e);
         }
     }
 

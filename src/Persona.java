@@ -91,7 +91,7 @@ public class Persona {
 
     //COMPORTAMIENTOS
     public void imprimir() {             
-        System.out.println("Validación del DNI: [ "+ getDNI() +" ] realizado con éxito.");
+        System.out.println("\nValidación del DNI: [ "+ getDNI() +" ] realizado con éxito.");
         System.out.println("Validación del nombre: [ "+ getNombre() +" ] realizado con éxito.");
         System.out.println("Validación del primer apellido: [ "+ getPrimerApellido() +" ] realizado con éxito.");
         System.out.println("Validación del segundo apellido: [ "+ getSegundoApellido() +" ] realizado con éxito.");
